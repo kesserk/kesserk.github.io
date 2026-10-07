@@ -1,166 +1,502 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-GB">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Kesser Karim — Healthcare AI Researcher & ML Engineer</title>
-  <meta name="description" content="PhD researcher at the University of Portsmouth working on fair, calibrated, explainable machine learning for early Type-2 Diabetes risk prediction in South Asian populations.">
+  <title>Kesser Karim — Machine Learning Engineer · Healthcare &amp; AI Safety</title>
+  <meta name="description" content="Kesser Karim builds and audits AI for patients and children. ML engineer and Portsmouth PhD researcher in fair, calibrated, explainable healthcare AI. Abu Dhabi.">
+  <meta name="author" content="Kesser Karim">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://kesserkarim.com/">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 
-  <!-- Open Graph for nice link previews -->
-  <meta property="og:title" content="Kesser Karim — Healthcare AI Researcher & ML Engineer">
-  <meta property="og:description" content="PhD researcher building fair, calibrated, explainable ML for Type-2 Diabetes risk prediction.">
-  <meta property="og:type" content="profile">
-  <meta property="og:url" content="https://kesserkarim.com">
+  <meta property="og:title" content="Kesser Karim — I build and audit AI that's safe for patients and children">
+  <meta property="og:description" content="ML engineer and Portsmouth PhD researcher in fair, calibrated, explainable AI. Founder of FutureTech. Building Harbour. Abu Dhabi.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://kesserkarim.com/">
+  <meta property="og:locale" content="en_GB">
+  <meta property="og:image" content="https://kesserkarim.com/og-card.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Kesser Karim: I build and audit AI that is safe for patients and children.">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Kesser Karim — I build and audit AI that's safe for patients and children">
+  <meta name="twitter:description" content="ML engineer and Portsmouth PhD researcher in fair, calibrated, explainable AI. Founder of FutureTech. Building Harbour. Abu Dhabi.">
+  <meta name="twitter:image" content="https://kesserkarim.com/og-card.png">
+  <meta name="twitter:image:alt" content="Kesser Karim: I build and audit AI that is safe for patients and children.">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "@id": "https://kesserkarim.com/#person",
+    "name": "Kesser Karim",
+    "url": "https://kesserkarim.com/",
+    "email": "mailto:kesserk@gmail.com",
+    "jobTitle": "Machine Learning Engineer",
+    "description": "Machine learning engineer and PhD researcher who builds and audits AI that is safe for patients and children. Fair, calibrated, explainable ML for early Type-2 diabetes risk. Founder of FutureTech. Building Harbour. Based in Abu Dhabi.",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Abu Dhabi",
+      "addressCountry": "AE"
+    },
+    "alumniOf": [
+      { "@type": "CollegeOrUniversity", "name": "University of Portsmouth" },
+      { "@type": "CollegeOrUniversity", "name": "University of Sunderland" },
+      { "@type": "CollegeOrUniversity", "name": "Manchester Metropolitan University" }
+    ],
+    "affiliation": [
+      { "@type": "CollegeOrUniversity", "name": "University of Portsmouth" },
+      { "@type": "EducationalOrganization", "name": "Nord Anglia International School Abu Dhabi" }
+    ],
+    "knowsAbout": [
+      "Machine learning",
+      "Fairness in machine learning",
+      "Model calibration",
+      "Explainable AI",
+      "Type-2 diabetes risk prediction",
+      "AI safety for children",
+      "Educational technology"
+    ],
+    "sameAs": [
+      "https://www.linkedin.com/in/kesser-karim/",
+      "https://github.com/kesserk"
+    ]
+  }
+  </script>
+  <!-- HEADSHOT / JSON-LD: when a real photo exists, add "image": "https://kesserkarim.com/headshot.jpg" to the Person object above. Do not point image at the social card. -->
 
   <style>
     :root {
-      --ink: #1a1a1a;
-      --muted: #666;
-      --accent: #2c5f7c;
-      --bg: #fafafa;
-      --rule: #e5e5e5;
+      --ink: #162028;
+      --muted: #3e4c58;
+      --accent: #0e5462;
+      --accent-dark: #0a3d48;
+      --bg: #f4f1eb;
+      --card: #fffcf8;
+      --rule: #e2dbd1;
+      --chip: #e6f1f3;
+      --hire: #12343c;
     }
     * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
     body {
+      margin: 0;
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
       color: var(--ink);
       background: var(--bg);
-      max-width: 720px;
-      margin: 0 auto;
-      padding: 4rem 1.5rem;
       line-height: 1.6;
       font-size: 17px;
     }
-    h1 {
-      font-size: 2.2rem;
-      margin: 0 0 0.25rem;
-      letter-spacing: -0.02em;
+    .skip {
+      position: absolute;
+      left: 0.75rem;
+      top: -3rem;
+      background: var(--hire);
+      color: #fff;
+      padding: 0.5rem 0.8rem;
+      z-index: 2;
     }
-    h2 {
-      font-size: 1.1rem;
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
-      color: var(--accent);
-      margin: 2.5rem 0 0.75rem;
-      padding-bottom: 0.4rem;
-      border-bottom: 1px solid var(--rule);
-    }
-    .tagline {
-      color: var(--muted);
-      font-size: 1.05rem;
-      margin: 0 0 1.5rem;
-    }
-    p { margin: 0 0 1rem; }
+    .skip:focus { top: 0.75rem; }
     a {
       color: var(--accent);
-      text-decoration: none;
-      border-bottom: 1px solid transparent;
-      transition: border-color 0.15s;
+      text-decoration-thickness: 1px;
+      text-underline-offset: 0.15em;
     }
-    a:hover { border-color: var(--accent); }
-    ul {
-      padding-left: 1.2rem;
-      margin: 0 0 1rem;
+    a:hover { color: var(--accent-dark); }
+    a:focus-visible {
+      outline: 2px solid var(--accent);
+      outline-offset: 3px;
     }
-    li { margin-bottom: 0.4rem; }
-    .links {
+    .wrap {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 1.25rem 1.25rem 3.5rem;
+    }
+    header {
       display: flex;
-      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: baseline;
       gap: 1rem;
-      margin: 1.5rem 0;
+      padding-bottom: 1rem;
+      border-bottom: 1px solid var(--rule);
     }
-    .links a {
-      padding: 0.4rem 0.8rem;
-      background: white;
-      border: 1px solid var(--rule);
-      border-radius: 6px;
-      font-size: 0.95rem;
-    }
-    .links a:hover {
-      background: var(--accent);
-      color: white;
-      border-color: var(--accent);
-    }
-    .project {
-      background: white;
-      border: 1px solid var(--rule);
-      border-radius: 8px;
-      padding: 1.25rem;
-      margin-bottom: 1rem;
-    }
-    .project h3 {
-      margin: 0 0 0.4rem;
+    .site-name {
+      margin: 0;
+      font-weight: 700;
+      letter-spacing: -0.02em;
       font-size: 1.05rem;
     }
-    .project p {
-      margin: 0 0 0.5rem;
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.35rem 1rem;
+      font-size: 0.95rem;
+    }
+    nav a { color: var(--ink); text-decoration: none; }
+    nav a:hover { color: var(--accent); text-decoration: underline; }
+    .hero { padding: 2rem 0 0.5rem; }
+    .hero-layout {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.25rem;
+    }
+    h1 {
+      font-family: Georgia, "Iowan Old Style", "Palatino Linotype", Palatino, serif;
+      font-size: clamp(1.7rem, 3.4vw, 2.45rem);
+      font-weight: 500;
+      line-height: 1.22;
+      letter-spacing: -0.02em;
+      margin: 0 0 0.9rem;
+    }
+    .sub {
+      color: var(--muted);
+      font-size: 1.05rem;
+      margin: 0 0 1rem;
+      max-width: 42rem;
+    }
+    .about { margin: 0; max-width: 42rem; }
+    .headshot {
+      width: 112px;
+      height: 112px;
+      border-radius: 50%;
+      object-fit: cover;
+      background: var(--rule);
+      display: block;
+    }
+    .hire {
+      background: var(--hire);
+      color: #f4f1eb;
+      border-radius: 12px;
+      padding: 1.15rem 1.25rem 1.25rem;
+      margin: 1.5rem 0 0.5rem;
+    }
+    .hire p { margin: 0 0 0.75rem; }
+    .hire-kicker {
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      font-size: 0.75rem;
+      font-weight: 700;
+      color: #b7dbe2;
+      margin-bottom: 0.35rem;
+    }
+    .actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.6rem;
+    }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 44px;
+      padding: 0.45rem 0.95rem;
+      border-radius: 8px;
+      border: 1px solid transparent;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.95rem;
+    }
+    .btn-primary { background: #fff; color: var(--hire); }
+    .btn-primary:hover { background: #e7f3f5; color: var(--hire); }
+    .btn-ghost {
+      background: transparent;
+      color: #fff;
+      border-color: rgba(255, 255, 255, 0.45);
+    }
+    .btn-ghost:hover { background: rgba(255, 255, 255, 0.08); color: #fff; }
+    h2 {
+      font-size: 0.82rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--accent);
+      margin: 2.6rem 0 0.9rem;
+    }
+    .pillars {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 0.85rem;
+    }
+    .pillar, .project, .role {
+      background: var(--card);
+      border: 1px solid var(--rule);
+      border-radius: 10px;
+      padding: 1rem 1.05rem 1.1rem;
+    }
+    .pillar h3, .project h3, .role h3 {
+      font-size: 1.05rem;
+      margin: 0 0 0.4rem;
+      line-height: 1.35;
+    }
+    .pillar p, .project p, .role p { margin: 0; color: var(--muted); font-size: 0.98rem; }
+    .pillar p + p, .project p + p { margin-top: 0.65rem; }
+    .project { margin-bottom: 0.85rem; }
+    .project-head, .role-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 0.75rem;
+      margin-bottom: 0.35rem;
+    }
+    .project-head h3, .role-head h3 { margin: 0; }
+    .status {
+      flex: none;
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.02em;
+      padding: 0.2rem 0.5rem;
+      border-radius: 999px;
+      background: var(--chip);
+      color: var(--accent-dark);
+      white-space: nowrap;
+    }
+    .status-soon { background: #f4ead6; color: #6b4a12; }
+    .status-design { background: #eceae6; color: #4a463f; }
+    .meta {
+      margin-top: 0.75rem;
+      font-size: 0.9rem;
+    }
+    .note {
+      margin: 0.25rem 0 0;
       color: var(--muted);
       font-size: 0.95rem;
     }
-    .project .meta {
-      font-size: 0.85rem;
+    .roles { display: grid; gap: 0.85rem; }
+    .role .when {
+      margin: 0.15rem 0 0.55rem;
       color: var(--muted);
+      font-size: 0.9rem;
+    }
+    .role ul {
+      margin: 0;
+      padding-left: 1.15rem;
+      color: var(--ink);
+    }
+    .role li { margin: 0.28rem 0; }
+    .earlier {
+      margin: 0.9rem 0 0;
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+    #contact p { max-width: 42rem; }
+    .contact-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-top: 1rem;
+    }
+    .contact-links a {
+      min-height: 44px;
+      display: inline-flex;
+      align-items: center;
+      padding: 0.35rem 0.8rem;
+      background: var(--card);
+      border: 1px solid var(--rule);
+      border-radius: 8px;
+      text-decoration: none;
+      color: var(--ink);
+      font-weight: 600;
+    }
+    .contact-links a:hover {
+      border-color: var(--accent);
+      color: var(--accent-dark);
     }
     footer {
-      margin-top: 3rem;
-      padding-top: 1.5rem;
+      margin-top: 2.5rem;
+      padding-top: 1rem;
       border-top: 1px solid var(--rule);
-      font-size: 0.85rem;
       color: var(--muted);
+      font-size: 0.88rem;
+    }
+    @media (max-width: 800px) {
+      .pillars { grid-template-columns: 1fr; }
+      header { flex-direction: column; align-items: flex-start; }
+      h1 { font-size: 1.65rem; }
+    }
+    @media (max-width: 560px) {
+      body { font-size: 16.5px; }
+      .wrap { padding: 1rem 1rem 2.5rem; }
+      .actions, .contact-links { flex-direction: column; }
+      .btn, .contact-links a { width: 100%; }
+      .project-head, .role-head { flex-direction: column; }
+      .headshot { width: 84px; height: 84px; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
     }
   </style>
 </head>
 <body>
+  <a class="skip" href="#main">Skip to content</a>
+  <div class="wrap">
+    <header>
+      <p class="site-name">Kesser Karim</p>
+      <nav aria-label="Primary">
+        <a href="#work">What I do</a>
+        <a href="#projects">Projects</a>
+        <a href="#experience">Experience</a>
+        <a href="#contact">Contact</a>
+        <a href="cv.html">CV</a>
+      </nav>
+    </header>
 
-  <h1>Kesser Karim</h1>
-  <p class="tagline">PhD Researcher in Healthcare AI &middot; Building fair, calibrated ML for Type-2 Diabetes risk prediction</p>
+    <main id="main">
+      <section class="hero" aria-labelledby="hero-heading">
+        <div class="hero-layout">
+          <!-- HEADSHOT SLOT
+               Uncomment the image once a real photo is in the repo as headshot.jpg
+               (square, at least 320×320, neutral background). Do not use a stock photo.
+               <img class="headshot" src="headshot.jpg" width="112" height="112" alt="Kesser Karim">
+          -->
+          <div>
+            <h1 id="hero-heading">I build and audit AI that's safe for the people it serves: patients and children.</h1>
+            <p class="sub">ML engineer &amp; PhD researcher (Portsmouth) in fair, calibrated, explainable AI · Founder of FutureTech · Building Harbour · Abu Dhabi.</p>
+            <p class="about">I am a machine learning engineer and a part-time PhD researcher at the University of Portsmouth. The doctorate is on fair, calibrated and explainable machine learning for early Type-2 diabetes risk in South Asian populations, with data partnerships at Connected Bradford and UK Biobank. I teach Computer Science at Nord Anglia International School in Abu Dhabi. I founded FutureTech, a tutoring platform for parents in the UAE and the UK, and I built PenBright, an AI marking and feedback tool. I am also building Harbour, which will independently test, monitor and certify AI products used by children.</p>
+          </div>
+        </div>
 
-  <div class="links">
-    <a href="mailto:kesserk@gmail.com">Email</a>
-    <a href="https://linkedin.com/in/kesser-karim">LinkedIn</a>
-    <a href="https://github.com/kesserk">GitHub</a>
-    <a href="https://kesserkarim.substack.com">Writing</a>
-            <a href="/cv.html">CV (view / print)</a>
+        <aside class="hire" aria-label="Hiring">
+          <p class="hire-kicker">Hiring</p>
+          <p>Open to Machine Learning Engineer, AI Engineer, Applied Scientist, AI evaluation and responsible AI, and EdTech AI roles — UAE or remote.</p>
+          <div class="actions">
+            <a class="btn btn-primary" href="mailto:kesserk@gmail.com?subject=Role%20enquiry%20for%20Kesser%20Karim">Email Kesser</a>
+            <a class="btn btn-ghost" href="kesser-karim-cv.pdf" download>Download CV (PDF)</a>
+            <a class="btn btn-ghost" href="cv.html">View CV</a>
+          </div>
+        </aside>
+      </section>
+
+      <section id="work" aria-labelledby="work-heading">
+        <h2 id="work-heading">What I do</h2>
+        <div class="pillars">
+          <article class="pillar">
+            <h3>Healthcare ML</h3>
+            <p>Fair, calibrated and explainable models for early Type-2 diabetes risk in South Asian populations. This is my PhD at the University of Portsmouth. Connected Bradford and UK Biobank are the data partnerships behind the research. NHS records cannot be published, so the public T2D Risk Predictor uses open NHANES data to show the same audit method.</p>
+          </article>
+          <article class="pillar">
+            <h3>AI safety for children</h3>
+            <p>Harbour will independently test, monitor and certify AI products used by children. It is for the vendors who ship those products. Launching soon — it is not available yet.</p>
+          </article>
+          <article class="pillar">
+            <h3>EdTech products</h3>
+            <p>FutureTech is a tutoring platform for parents in the UAE and the UK. PenBright, formerly MarkMate, is an AI marking and feedback tool: structured comments aligned to the mark scheme, designed around real assessment workflows.</p>
+          </article>
+        </div>
+      </section>
+
+      <section id="projects" aria-labelledby="projects-heading">
+        <h2 id="projects-heading">Projects</h2>
+
+        <article class="project">
+          <div class="project-head">
+            <h3>T2D Risk Predictor</h3>
+            <span class="status">In progress</span>
+          </div>
+          <p>A public pipeline for fairness-aware Type-2 diabetes risk prediction, written alongside the Portsmouth PhD. It uses the NHANES open dataset, not the NHS data from the doctorate.</p>
+          <p>In the repository today: a FastAPI skeleton, Docker, GitHub Actions, an NHANES exploratory notebook and a baseline model notebook. Still ahead, and not claimed as finished: comparison of logistic regression, XGBoost, an MLP and a tabular transformer; Fairlearn subgroup audits; SHAP explanations; and any published scores. The README states that no performance numbers are reported yet.</p>
+          <!-- METRICS PLACEHOLDER
+               Do not type numbers here until they are in the t2d-risk-predictor README.
+               Checked October 2026: that README says "No performance numbers are reported yet."
+               When they exist, replace this comment with a visible line, copied from the README, covering:
+               AUROC, AUPRC, Brier score, expected calibration error, and subgroup fairness
+               (equalised odds and calibration-by-group).
+               Source: https://github.com/kesserk/t2d-risk-predictor
+          -->
+          <p class="meta"><a href="https://github.com/kesserk/t2d-risk-predictor">github.com/kesserk/t2d-risk-predictor</a></p>
+        </article>
+
+        <article class="project">
+          <div class="project-head">
+            <h3>PenBright</h3>
+            <span class="status">Built</span>
+          </div>
+          <p>An AI marking and feedback tool, formerly MarkMate. It drafts structured feedback aligned to a mark scheme, so comments stay consistent with the assessment, and it is built around how teachers actually mark. I am looking for teachers to test it.</p>
+          <!-- PLACEHOLDER: add a public PenBright URL in this card when one exists. Do not invent a link. -->
+        </article>
+
+        <article class="project">
+          <div class="project-head">
+            <h3>FutureTech</h3>
+            <span class="status">Founded</span>
+          </div>
+          <p>A tutoring platform I founded for parents in the UAE and the UK.</p>
+          <!-- PLACEHOLDER: add a public FutureTech URL in this card when one exists. Do not invent a link. -->
+        </article>
+
+        <article class="project">
+          <div class="project-head">
+            <h3>Harbour</h3>
+            <span class="status status-soon">Launching soon</span>
+          </div>
+          <p>Harbour will independently test, monitor and certify AI products used by children, and it will be sold to the vendors of those products. It has not launched.</p>
+          <!-- PLACEHOLDER: add a public Harbour URL only after launch. Do not link it before then. -->
+        </article>
+
+        <p class="note"><strong>Also in design:</strong> Diabetes Guidance RAG, a planned question-answering system over NICE NG28 and the ADA Standards of Care. The <a href="https://github.com/kesserk/diabetes-rag">repository</a> holds the design note only. Ingestion, retrieval, evaluation and serving are not built, so this is not a shipped system.</p>
+      </section>
+
+      <section id="experience" aria-labelledby="experience-heading">
+        <h2 id="experience-heading">Experience</h2>
+        <div class="roles">
+          <article class="role">
+            <div class="role-head">
+              <h3>PhD candidate, Computer Science (part-time)</h3>
+            </div>
+            <p class="when">University of Portsmouth, UK · 2024–present</p>
+            <ul>
+              <li>Research on early detection of Type-2 diabetes risk in South Asian populations: models that are calibrated, fair across groups, and explainable.</li>
+              <li>Data partnerships with Connected Bradford and UK Biobank, including a comparative design across Bradford localities with high and low South Asian population density.</li>
+              <li>Methods span logistic regression, gradient-boosted trees and deep learning, with calibration analysis and subgroup fairness audits. The PhD runs alongside a full-time teaching post.</li>
+            </ul>
+          </article>
+
+          <article class="role">
+            <div class="role-head">
+              <h3>Computer Science teacher</h3>
+            </div>
+            <p class="when">Nord Anglia International School Abu Dhabi, UAE · August 2024–present</p>
+            <ul>
+              <li>Played a key role in establishing and growing the Secondary Computer Science department, including resources, schemes of work and digital learning platforms aligned to Cambridge IGCSE and A Level.</li>
+              <li>Led a future-focused Computer Science curriculum embedding problem-solving, creativity and digital fluency.</li>
+              <li>Facilitated enrichment through the Nord Anglia–MIT collaboration, guiding students through hands-on STEAM challenges.</li>
+              <li>Founded and lead the school's Minecraft Education Club, teaching computational thinking, teamwork and design thinking.</li>
+              <li>Work with the leadership team on digital citizenship and safe, purposeful use of technology.</li>
+            </ul>
+          </article>
+
+          <article class="role">
+            <div class="role-head">
+              <h3>Gifted &amp; Talented coordinator and Computer Science teacher</h3>
+            </div>
+            <p class="when">Safa Community School, Dubai, UAE · January 2021–August 2024</p>
+            <ul>
+              <li>Built Power BI dashboards tracking performance across approximately 200 students and 6 subjects, replacing reporting that had been done by hand.</li>
+              <li>Automated data ingestion and cleaning from the school management system into those dashboards.</li>
+              <li>Designed and delivered a Python and data science curriculum in Jupyter, covering supervised and unsupervised learning, evaluation and basic deployment patterns, and mentored student machine learning projects.</li>
+              <li>Taught GCSE and A Level Computer Science (ages 11–18) and contributed to curriculum design across Key Stages 3, 4 and 5.</li>
+            </ul>
+          </article>
+        </div>
+        <p class="earlier">Earlier: deputised for the Head of Mathematics and led a new computing curriculum at One in a Million Free School, Bradford (2018–2020); Computer Science at Lightcliffe Academy (2018); Curriculum Leader for Technology at Trinity Academy Sowerby Bridge (2017–2018); Cambridge IGCSE Computer Science, ICT and IB at GEMS Wellington International School, Dubai (2015–2017). MSc Computer Science and Data Science, University of Sunderland (2024); PGCE Computing and ICT, Manchester Metropolitan University (2015). <a href="cv.html">Full CV</a>.</p>
+      </section>
+
+      <section id="contact" aria-labelledby="contact-heading">
+        <h2 id="contact-heading">Contact</h2>
+        <p>I am open to hiring and to collaboration. If you are recruiting for machine learning, applied science, AI evaluation, responsible AI or EdTech, or you want to work together on clinical prediction, AI used by children, or education products, email me. That is the fastest way to reach me.</p>
+        <div class="contact-links">
+          <a href="mailto:kesserk@gmail.com">kesserk@gmail.com</a>
+          <a href="https://www.linkedin.com/in/kesser-karim/">LinkedIn</a>
+          <a href="https://github.com/kesserk">GitHub</a>
+          <a href="kesser-karim-cv.pdf" download>CV (PDF)</a>
+          <a href="cv.html">CV (HTML)</a>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      Last updated: October 2026. <a href="https://github.com/kesserk/kesserk.github.io">Source on GitHub</a>.
+    </footer>
   </div>
-
-  <h2>About</h2>
-  <p>I'm a PhD researcher at the University of Portsmouth developing machine learning models for the early detection of Type-2 Diabetes risk in South Asian populations. My work focuses on fairness, calibration, and explainability in clinical risk prediction &mdash; the technical conditions under which a model is safe to deploy in diverse populations.</p>
-  <p>The research is directly relevant to populations with very high T2D prevalence, particularly the GCC region and South Asia, where adult diabetes prevalence is among the highest globally and existing risk scores often perform worst.</p>
-  <p>Alongside the doctoral research, I build production ML systems in healthcare AI. I'm currently looking for Machine Learning Engineer, AI Engineer, and Applied Scientist roles &mdash; UAE-based or remote-friendly.</p>
-
-  <h2>Current Projects</h2>
-
-  <div class="project">
-    <h3>T2D Risk Predictor</h3>
-    <p>A public, productionised ML pipeline for fair, calibrated, explainable Type-2 Diabetes risk prediction. Subgroup audits with Fairlearn, SHAP-based explainability, FastAPI deployment, MLflow tracking.</p>
-            <span class="meta">Python &middot; PyTorch &middot; scikit-learn &middot; <span style="color:var(--muted)"><a href="https://github.com/kesserk/t2d-risk-predictor">github.com/kesserk/t2d-risk-predictor</a>
-  </div>
-
-  <div class="project">
-    <h3>Diabetes Guidance RAG</h3>
-    <p>A production-grade retrieval-augmented Q&amp;A system over NICE NG28 and ADA Standards of Care for diabetes, with hybrid retrieval, hallucination evaluation, and Langfuse tracing.</p>
-            <span class="meta">LangChain &middot; pgvector &middot; PubMedBERT &middot; <span style="color:var(--muted)">Repo coming Aug 2026</span></span>
-  </div>
-
-  <h2>Background</h2>
-  <ul>
-    <li>PhD Computer Science (in progress), University of Portsmouth</li>
-    <li>MSc Computer Science &amp; Data Science, University of Sunderland (2024)</li>
-    <li>PGCE Computer Science, Manchester Metropolitan University (2015)</li>
-    <li>Five years of applied data science and Python instruction in education settings (Dubai &amp; UK)</li>
-  </ul>
-
-  <h2>Recent Writing</h2>
-  <ul>
-    <li><a href="https://kesserkarim.substack.com/p/why-early-type-2-diabetes-prediction-needs-fairness">Why Early Type-2 Diabetes Prediction Needs Fairness, Not Just Accuracy</a></li>
-  </ul>
-
-  <h2>Get in touch</h2>
-  <p>The fastest way to reach me is <a href="mailto:kesserk@gmail.com">email</a>. I'm particularly interested in conversations about fairness in clinical ML, Type-2 Diabetes risk prediction, or healthcare AI in high-prevalence populations.</p>
-
-  <footer>
-    Last updated: May 2026. Built as a single HTML file. View the <a href="https://github.com/kesserk/kesserk.github.io">source on GitHub</a>.
-  </footer>
-
 </body>
 </html>

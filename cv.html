@@ -1,42 +1,280 @@
-<!doctype html>
-<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Kesser Ali Karim — CV</title><style>
-:root{--navy:#16283F;--ink:#1a1a1a;--grey:#5b6672;--line:#d8dee6;--accent:#4f8fd6;--bg:#f5f7fa}
-*{box-sizing:border-box;margin:0;padding:0}
-body{font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;color:var(--ink);background:var(--bg);line-height:1.5;font-size:15px}
-.wrap{max-width:860px;margin:0 auto;padding:48px 28px;background:#fff;box-shadow:0 1px 8px rgba(22,40,63,.08)}
-h1{font-size:2rem;color:var(--navy);letter-spacing:.5px}
-.tag{color:var(--navy);font-weight:600;margin:.35rem 0 .6rem}
-.contact{color:var(--grey);font-size:.9rem;line-height:1.7}
-.contact a{color:var(--accent);text-decoration:none}
-h2{font-size:.95rem;text-transform:uppercase;letter-spacing:1.6px;color:var(--navy);border-bottom:2px solid var(--navy);padding-bottom:.3rem;margin:2rem 0 .9rem}
-h3{font-size:1.02rem;color:var(--navy);margin-top:1.1rem}
-.org{font-weight:600;color:#33475e}
-.dates{color:var(--grey);font-style:italic;font-size:.88rem;margin:.15rem 0 .45rem}
-ul{list-style:none;margin:.2rem 0 .6rem}
-li{padding-left:1.15rem;position:relative;margin-bottom:.35rem}
-li::before{content:"";position:absolute;left:0;top:.5em;width:.42em;height:.42em;border-radius:50%;background:var(--accent)}
-.kv b{color:var(--navy)}
-.kv p{margin-bottom:.4rem}
-.earl{color:var(--grey);font-style:italic;font-size:.9rem;margin-top:1rem}
-.note{margin-top:2.4rem;padding-top:1rem;border-top:1px solid var(--line);color:var(--grey);font-size:.85rem}
-@media print{body{background:#fff;font-size:11.2px}.wrap{box-shadow:none;padding:0;max-width:none}.noprint{display:none}}
-</style></head><body><div class="wrap">
-<header><h1>Kesser Ali Karim</h1><p class="tag">Machine Learning Engineer (in transition) | Healthcare AI · Fairness &amp; Explainability · MLOps</p>
-<p class="contact">Abu Dhabi, United Arab Emirates · +971 52 620 3001 · <a href="mailto:kesserk@gmail.com">kesserk@gmail.com</a><br>
-<a href="https://www.linkedin.com/in/kesser-karim/">linkedin.com/in/kesser-karim</a> · <a href="https://github.com/kesserk">github.com/kesserk</a>
-· <a href="javascript:window.print()" class="noprint">Print / save as PDF</a></p></header>
-<h2>Profile</h2><p>PhD researcher building fair, calibrated and explainable clinical risk prediction models on linked UK population health data, transitioning into machine learning engineering from a decade leading Computer Science education. Undertaking a part-time PhD at the University of Portsmouth on early detection of Type-2 Diabetes risk in South Asian populations, with data partnerships spanning Connected Bradford and UK Biobank. Holds an MSc in Computer Science and Data Science. Builds ML systems end to end — multi-model comparison, calibration analysis, subgroup fairness auditing with Fairlearn, SHAP explainability and deployment through FastAPI, Docker and MLflow — alongside retrieval-augmented systems with formal hallucination evaluation. A decade of teaching and leading Computer Science across UK and UAE schools brings unusual strength in making technical work legible to non-specialist audiences. Seeking machine learning engineering roles in healthcare AI, applied ML or EdTech across the UAE and remote UK.</p>
-<h2>Technical Skills</h2><p class="kv"><b>Programming:</b> Python (advanced), SQL, R, JavaScript, Java, C++</p><p class="kv"><b>Machine Learning:</b> PyTorch, TensorFlow, scikit-learn, XGBoost, LightGBM, Hugging Face Transformers</p><p class="kv"><b>GenAI &amp; LLM:</b> LangChain, LlamaIndex, RAG architectures, vector databases (pgvector, Pinecone), QLoRA fine-tuning, evaluation harnesses</p><p class="kv"><b>ML Engineering:</b> FastAPI, Docker, MLflow, Git, GitHub Actions (CI/CD), model serving, experiment tracking</p><p class="kv"><b>Data Engineering:</b> pandas, NumPy, Spark, Hadoop, ETL and data pipeline design</p><p class="kv"><b>Visualisation:</b> Matplotlib, Seaborn, Power BI, Tableau</p><p class="kv"><b>Cloud:</b> AWS (S3, EC2, Lambda); Microsoft Azure</p><p class="kv"><b>Specialist:</b> Clinical risk prediction, fairness auditing (Fairlearn, AIF360), model calibration, explainable AI (SHAP)</p>
-<h2>Doctoral Research</h2>
-<h3>PhD Candidate, Computer Science (part-time) <span class="org">— University of Portsmouth, UK</span></h3>
-<div class="dates">2024 – present</div><p>Research: Early Detection of Type-2 Diabetes Risk using AI/ML in the South Asian Population.</p>
-<ul><li>Developing calibrated, fair and explainable machine learning models for early Type-2 Diabetes risk stratification from routinely collected demographic, lifestyle and clinical data.</li><li>Data partnerships with Connected Bradford and UK Biobank; comparative study design across Bradford localities with high and low South Asian population density to assess equity impacts.</li><li>Methods span logistic regression, gradient-boosted trees and deep learning, with calibration analysis (Brier score, reliability diagrams) and subgroup fairness audits (equalised odds, calibration-by-group).</li><li>Conducted part-time alongside a full-time teaching post, requiring research that is resource-aware and deployable in real clinical settings.</li></ul>
-<h2>Technical Projects</h2><h3>T2D Risk Predictor — Fair, Calibrated and Explainable ML for Type-2 Diabetes</h3><div class="dates">Python, XGBoost, PyTorch, Fairlearn, SHAP, FastAPI, Docker, MLflow | github.com/kesserk/t2d-risk-predictor | In progress</div><ul><li>Public, productionised risk prediction pipeline on open health data, aligned to the doctoral research and built to be inspected.</li><li>Four-model comparison — logistic regression, XGBoost, MLP and tabular transformer — evaluated on AUROC, AUPRC, Brier score and calibration-by-subgroup.</li><li>Subgroup fairness audits via Fairlearn and SHAP-based explainability; served through FastAPI and Docker with MLflow tracking and drift monitoring.</li></ul><h3>Diabetes Guidance RAG — Retrieval-Augmented Q&amp;A over NICE NG28 and ADA Standards of Care</h3><div class="dates">LangChain, pgvector, PubMedBERT, RAGAS, Langfuse, FastAPI | github.com/kesserk/diabetes-rag | In progress</div><ul><li>Hybrid retrieval combining BM25 with dense PubMedBERT embeddings over canonical diabetes clinical guidelines, with cross-encoder reranking.</li><li>Evaluation harness using RAGAS plus a hand-curated clinical QA set, explicitly measuring faithfulness and hallucination rate rather than assuming correctness.</li><li>Deployed with FastAPI and pgvector, instrumented with Langfuse tracing.</li></ul><h3>Learning Analytics Early-Warning Model</h3><div class="dates">Python, scikit-learn, SHAP | Prototype</div><ul><li>Model unifying NGRT, CAT4, ALIS, TIMSS and internal school assessment data to flag learners who may need support, returning explainable reasons alongside suggested interventions.</li></ul><h3>MarkMate — AI-Assisted Marking and Feedback</h3><div class="dates">LLM application | In development</div><ul><li>Tool generating structured, mark-scheme-aligned feedback to reduce marking time while holding consistency, designed around real assessment workflows and currently seeking teacher testers.</li></ul>
-<h2>Professional Experience</h2><h3>Computer Science Teacher <span class="org">— Nord Anglia International School Abu Dhabi, UAE</span></h3><div class="dates">August 2024 – present</div><ul><li>Played a key role in establishing and growing the Secondary Computer Science department, including resources, schemes of work and digital learning platforms aligned to Cambridge IGCSE and A Level frameworks.</li><li>Led development of a future-focused Computer Science curriculum embedding problem-solving, creativity and digital fluency across key stages.</li><li>Facilitated enrichment through the Nord Anglia–MIT collaboration, guiding students through hands-on STEAM challenges and global innovation projects.</li><li>Founded and lead the school's Minecraft Education Club, using game-based learning to teach computational thinking, teamwork and design thinking.</li><li>Work with the leadership team to promote digital citizenship and safe, purposeful use of technology across the school community.</li></ul><h3>Gifted &amp; Talented Coordinator and Computer Science Teacher <span class="org">— Safa Community School, Dubai, UAE</span></h3><div class="dates">January 2021 – August 2024</div><ul><li>Built Power BI dashboards tracking student performance across approximately 200 students and 6 subjects, replacing reporting workflows previously done manually.</li><li>Automated data ingestion and cleaning pipelines connecting the school management system to visualisation platforms, reducing manual reporting time.</li><li>Designed and delivered a hands-on Python and data science curriculum using Jupyter, covering supervised and unsupervised learning, model evaluation and basic deployment patterns.</li><li>Mentored students on independent machine learning projects including image classification and regression tasks.</li><li>Taught GCSE and A Level Computer Science to students aged 11–18 and contributed to curriculum design across Key Stages 3, 4 and 5.</li></ul><h3>Mathematics and Computer Science Teacher <span class="org">— One in a Million Free School, Bradford, UK</span></h3><div class="dates">September 2018 – July 2020</div><ul><li>Deputised for the Head of Department, running the Mathematics department in his absence.</li><li>Led the design and planning of a new computing curriculum, including introductory Python, algorithms and data analytics.</li><li>Conducted data analysis of examination performance to identify focus areas, then created and implemented targeted intervention programmes.</li><li>Delivered the Edexcel GCSE Mathematics syllabus across KS3 and KS4; conducted teacher observation, performance management and NQT mentoring.</li></ul><h3>Computer Science Teacher <span class="org">— Lightcliffe Academy, Halifax, UK</span></h3><div class="dates">March 2018 – July 2018</div><ul><li>Delivered the Computer Science National Curriculum across Years 7–13, introducing the new KS3 curriculum, the OCR GCSE course and a BTEC Level 3 course in ICT.</li></ul><h3>Curriculum Leader, Technology <span class="org">— Trinity Academy Sowerby Bridge, UK</span></h3><div class="dates">September 2017 – March 2018</div><ul><li>Managed the Technology department covering Computer Science, iMedia and Business Studies, supervising delivery across specialist and non-specialist teachers.</li><li>Implemented intervention strategies and monitored attainment through assessment and target setting.</li></ul><h3>Computer Science Teacher <span class="org">— GEMS Wellington International School, Dubai, UAE</span></h3><div class="dates">September 2015 – July 2017</div><ul><li>Taught Cambridge iGCSE Computer Science, iGCSE ICT and IB curriculum to students aged 11–18, and contributed to curriculum design across Key Stages 3 and 4.</li></ul>
-<p class="earl">Earlier: ICT Trainee Teacher (PGCE placements) — King James Secondary School, Knaresborough and Bury Church of England High School, UK | 2014 – 2015</p>
-<h2>Education</h2><h3>PhD Computer Science (part-time)</h3><div class="dates">University of Portsmouth, UK | 2024 – present</div><p style="color:var(--grey);font-size:.9rem">Early Detection of Type-2 Diabetes Risk using AI/ML in the South Asian Population</p><h3>MSc Computer Science and Data Science</h3><div class="dates">University of Sunderland, UK | 2023 – 2024</div><p style="color:var(--grey);font-size:.9rem">Machine learning, time series analysis, big data technologies, deep learning with TensorFlow and PyTorch; dissertation applying Bayesian methods to predictive modelling on health-relevant datasets</p><h3>PGCE Computing &amp; ICT</h3><div class="dates">Manchester Metropolitan University, UK | 2014 – 2015</div><h3>Subject Knowledge Enhancement Course, Computing</h3><div class="dates">Manchester Metropolitan University, UK | 2014</div><h3>LLB Law</h3><div class="dates">Leeds Metropolitan University, UK | 2006 – 2010</div>
-<h2>Professional Development &amp; Memberships</h2><ul><li>Member, British Computer Society (BCS).</li><li>DataCamp Machine Learning Scientist with Python track completed; Machine Learning Engineer specialisation in progress.</li><li>Preparing for Microsoft AI-300: Machine Learning Operations (MLOps) Engineer Associate (successor to the retired DP-100).</li></ul>
-<h2>Additional</h2><p class="kv"><b>Languages:</b> English (native), Urdu (basic spoken)</p><p class="kv"><b>Interests:</b> Football, running and cycling; has run several marathons including London and New York, fundraising for charity</p><p class="kv"><b>Volunteering:</b> Local tuition centres, supporting students in Years 5–11 with Computer Science and Mathematics</p>
-<p class="note">Last updated August 2026.</p>
-</div></body></html>
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Kesser Karim — CV</title>
+  <meta name="description" content="CV of Kesser Karim, machine learning engineer and PhD researcher in fair, calibrated, explainable healthcare AI and AI safety for children. Abu Dhabi.">
+  <meta name="author" content="Kesser Karim">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://kesserkarim.com/cv.html">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <meta property="og:title" content="Kesser Karim — CV">
+  <meta property="og:description" content="Machine Learning Engineer · Healthcare &amp; AI Safety. Abu Dhabi. PhD researcher, University of Portsmouth.">
+  <meta property="og:type" content="profile">
+  <meta property="og:url" content="https://kesserkarim.com/cv.html">
+  <meta property="og:image" content="https://kesserkarim.com/og-card.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Kesser Karim — CV">
+  <meta name="twitter:description" content="Machine Learning Engineer · Healthcare &amp; AI Safety. Abu Dhabi.">
+  <meta name="twitter:image" content="https://kesserkarim.com/og-card.png">
+  <style>
+    :root {
+      --navy: #16283f;
+      --ink: #1a1a1a;
+      --grey: #5b6672;
+      --line: #d8dee6;
+      --accent: #4f8fd6;
+      --bg: #f5f7fa;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+      color: var(--ink);
+      background: var(--bg);
+      line-height: 1.5;
+      font-size: 15px;
+    }
+    .wrap {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 48px 28px;
+      background: #fff;
+      box-shadow: 0 1px 8px rgba(22, 40, 63, 0.08);
+    }
+    h1 { font-size: 2rem; color: var(--navy); letter-spacing: 0.5px; }
+    .tag { color: var(--navy); font-weight: 600; margin: 0.35rem 0 0.6rem; }
+    .contact { color: var(--grey); font-size: 0.9rem; line-height: 1.7; }
+    .contact a { color: var(--accent); text-decoration: none; }
+    h2 {
+      font-size: 0.95rem;
+      text-transform: uppercase;
+      letter-spacing: 1.6px;
+      color: var(--navy);
+      border-bottom: 2px solid var(--navy);
+      padding-bottom: 0.3rem;
+      margin: 2rem 0 0.9rem;
+    }
+    h3 { font-size: 1.02rem; color: var(--navy); margin-top: 1.1rem; }
+    .org { font-weight: 600; color: #33475e; }
+    .dates { color: var(--grey); font-style: italic; font-size: 0.88rem; margin: 0.15rem 0 0.45rem; }
+    ul { list-style: none; margin: 0.2rem 0 0.6rem; }
+    li { padding-left: 1.15rem; position: relative; margin-bottom: 0.35rem; }
+    li::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0.5em;
+      width: 0.42em;
+      height: 0.42em;
+      border-radius: 50%;
+      background: var(--accent);
+    }
+    .kv b { color: var(--navy); }
+    .kv p { margin-bottom: 0.4rem; }
+    .detail { color: var(--grey); font-size: 0.9rem; }
+    .earl { color: var(--grey); font-style: italic; font-size: 0.9rem; margin-top: 1rem; }
+    .note {
+      margin-top: 2.4rem;
+      padding-top: 1rem;
+      border-top: 1px solid var(--line);
+      color: var(--grey);
+      font-size: 0.85rem;
+    }
+    a:focus-visible { outline: 2px solid var(--navy); outline-offset: 2px; }
+    @media (max-width: 640px) {
+      body { font-size: 16px; }
+      .wrap { padding: 28px 18px; }
+      h1 { font-size: 1.6rem; }
+      .contact { overflow-wrap: anywhere; }
+    }
+    @media print {
+      body { background: #fff; font-size: 9.5px; line-height: 1.32; }
+      .wrap { box-shadow: none; padding: 0; max-width: none; }
+      .noprint { display: none !important; }
+      a { color: inherit; text-decoration: none; }
+      h1 { font-size: 16px; }
+      .tag { margin: 0.12rem 0 0.2rem; }
+      .contact { font-size: 9px; line-height: 1.35; }
+      h2 { font-size: 9px; margin: 0.55rem 0 0.28rem; padding-bottom: 0.15rem; break-after: avoid; page-break-after: avoid; }
+      h3 { font-size: 10.5px; margin-top: 0.42rem; break-after: avoid; page-break-after: avoid; }
+      .dates { margin: 0.04rem 0 0.16rem; break-after: avoid; page-break-after: avoid; }
+      ul { margin: 0.08rem 0 0.15rem; }
+      li { margin-bottom: 0.1rem; }
+      .kv p { margin-bottom: 0.06rem; }
+      .earl { margin-top: 0.35rem; }
+      .note { margin-top: 0.55rem; padding-top: 0.3rem; }
+    }
+    @page { size: A4; margin: 10mm 12mm; }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <h1>Kesser Karim</h1>
+      <p class="tag">Machine Learning Engineer · Healthcare &amp; AI Safety</p>
+      <p class="contact">Abu Dhabi, United Arab Emirates · <a href="mailto:kesserk@gmail.com">kesserk@gmail.com</a><br>
+        <a href="https://www.linkedin.com/in/kesser-karim/">linkedin.com/in/kesser-karim</a> ·
+        <a href="https://github.com/kesserk">github.com/kesserk</a> ·
+        <a href="https://kesserkarim.com/">kesserkarim.com</a>
+        <span class="noprint"><br>
+          <a href="kesser-karim-cv.pdf">Download PDF</a> ·
+          <a href="javascript:window.print()">Print / save as PDF</a>
+        </span>
+      </p>
+    </header>
+
+    <h2>Profile</h2>
+    <p>Machine learning engineer and part-time PhD researcher building fair, calibrated and explainable models for early Type-2 diabetes risk in South Asian populations, at the University of Portsmouth, with data partnerships at Connected Bradford and UK Biobank. Also builds and audits AI used by children: PenBright, an AI marking and feedback tool (formerly MarkMate); FutureTech, a tutoring platform founded for parents in the UAE and the UK; and Harbour, which will independently test, monitor and certify AI products used by children (launching soon; to be sold to vendors). Computer Science teacher at Nord Anglia International School Abu Dhabi, after a decade teaching and leading Computer Science in UK and UAE schools. MSc in Computer Science and Data Science. Seeking Machine Learning Engineer, AI Engineer, Applied Scientist, AI evaluation and responsible AI, and EdTech AI roles in the UAE or remote.</p>
+
+    <h2>Technical skills</h2>
+    <div class="kv">
+      <p><b>Programming:</b> Python (advanced), SQL, R, JavaScript</p>
+      <p><b>Machine learning:</b> PyTorch, TensorFlow, scikit-learn, XGBoost, LightGBM, Hugging Face Transformers</p>
+      <p><b>GenAI and LLM:</b> LangChain, LlamaIndex, RAG architectures, vector databases (pgvector, Pinecone), QLoRA fine-tuning, evaluation harnesses</p>
+      <p><b>ML engineering:</b> FastAPI, Docker, MLflow, Git, GitHub Actions (CI/CD), model serving, experiment tracking</p>
+      <p><b>Data:</b> pandas, NumPy, ETL and data pipeline design</p>
+      <p><b>Visualisation:</b> Matplotlib, Seaborn, Power BI, Tableau</p>
+      <p><b>Cloud:</b> AWS (S3, EC2, Lambda); Microsoft Azure</p>
+      <p><b>Specialist:</b> Clinical risk prediction, fairness auditing (Fairlearn, AIF360), model calibration, explainable AI (SHAP)</p>
+    </div>
+
+    <h2>Doctoral research</h2>
+    <h3>PhD candidate, Computer Science (part-time) <span class="org">— University of Portsmouth, UK</span></h3>
+    <p class="dates">2024 – present</p>
+    <p>Research: early detection of Type-2 diabetes risk using AI and machine learning in the South Asian population.</p>
+    <ul>
+      <li>Developing calibrated, fair and explainable machine learning models for early Type-2 diabetes risk stratification from routinely collected demographic, lifestyle and clinical data.</li>
+      <li>Data partnerships with Connected Bradford and UK Biobank; comparative study design across Bradford localities with high and low South Asian population density to assess equity impacts.</li>
+      <li>Methods span logistic regression, gradient-boosted trees and deep learning, with calibration analysis (Brier score, reliability diagrams) and subgroup fairness audits (equalised odds, calibration-by-group).</li>
+      <li>Conducted part-time alongside a full-time teaching post, so the research has to stay resource-aware and usable in real clinical settings.</li>
+    </ul>
+
+    <h2>Technical projects</h2>
+    <h3>T2D Risk Predictor — fair, calibrated and explainable ML for Type-2 diabetes</h3>
+    <p class="dates">Python, XGBoost, PyTorch, Fairlearn, SHAP, FastAPI, Docker, MLflow · github.com/kesserk/t2d-risk-predictor · In&nbsp;progress</p>
+    <ul>
+      <li>Public repository aligned to the doctoral research. It uses the NHANES open dataset because NHS data cannot be shared, and it is there to show the same fairness-audit method on data anyone can inspect.</li>
+      <li>In the repository now: a FastAPI service skeleton, Docker, GitHub Actions CI, an NHANES exploratory notebook and a baseline model notebook.</li>
+      <li>Not yet published: the model comparison (logistic regression, XGBoost, MLP and tabular transformer), the Fairlearn subgroup audit, SHAP explanations, and performance numbers. The README states that no performance numbers are reported yet.</li>
+    </ul>
+
+    <h3>Diabetes Guidance RAG — questions over NICE NG28 and ADA Standards of Care</h3>
+    <p class="dates">Design note only · github.com/kesserk/diabetes-rag · In design</p>
+    <ul>
+      <li>A planned retrieval-augmented system over NICE NG28 and the ADA Standards of Care. Faithfulness and hallucination checks are part of the design, not an afterthought.</li>
+      <li>The repository currently holds that design note only. Ingestion, retrieval, evaluation and serving are not built. This is not a shipped system.</li>
+    </ul>
+
+    <h3>PenBright — AI marking and feedback <span class="org">(formerly MarkMate)</span></h3>
+    <p class="dates">LLM application · Built · seeking teacher testers</p>
+    <ul>
+      <li>Tool that generates structured, mark-scheme-aligned feedback, to shorten marking time while holding consistency. Designed around real assessment workflows.</li>
+    </ul>
+
+    <h3>FutureTech — tutoring platform</h3>
+    <p class="dates">Founder</p>
+    <ul>
+      <li>Tutoring platform for parents in the UAE and the UK.</li>
+    </ul>
+
+    <h3>Harbour — independent assurance for AI products used by children</h3>
+    <p class="dates">Founder · Launching soon · not yet launched</p>
+    <ul>
+      <li>Will independently test, monitor and certify AI products used by children, and will be sold to vendors. It has not launched.</li>
+    </ul>
+
+    <h3>Learning analytics early-warning model</h3>
+    <p class="dates">Python, scikit-learn, SHAP · Prototype</p>
+    <ul>
+      <li>Model bringing together NGRT, CAT4, ALIS, TIMSS and internal school assessment data to flag learners who may need support, with explainable reasons and suggested interventions.</li>
+    </ul>
+
+    <h2>Professional experience</h2>
+    <h3>Computer Science teacher <span class="org">— Nord Anglia International School Abu Dhabi, UAE</span></h3>
+    <p class="dates">August 2024 – present</p>
+    <ul>
+      <li>Played a key role in establishing and growing the Secondary Computer Science department, including resources, schemes of work and digital learning platforms aligned to Cambridge IGCSE and A Level frameworks.</li>
+      <li>Led development of a future-focused Computer Science curriculum embedding problem-solving, creativity and digital fluency across key stages.</li>
+      <li>Facilitated enrichment through the Nord Anglia–MIT collaboration, guiding students through hands-on STEAM challenges and global innovation projects.</li>
+      <li>Founded and lead the school's Minecraft Education Club, using game-based learning to teach computational thinking, teamwork and design thinking.</li>
+      <li>Work with the leadership team to promote digital citizenship and safe, purposeful use of technology across the school community.</li>
+    </ul>
+
+    <h3>Gifted &amp; Talented coordinator and Computer Science teacher <span class="org">— Safa Community School, Dubai, UAE</span></h3>
+    <p class="dates">January 2021 – August 2024</p>
+    <ul>
+      <li>Built Power BI dashboards tracking student performance across approximately 200 students and 6 subjects, replacing reporting workflows previously done manually.</li>
+      <li>Automated data ingestion and cleaning pipelines connecting the school management system to visualisation platforms, reducing manual reporting time.</li>
+      <li>Designed and delivered a hands-on Python and data science curriculum using Jupyter, covering supervised and unsupervised learning, model evaluation and basic deployment patterns.</li>
+      <li>Mentored students on independent machine learning projects including image classification and regression tasks.</li>
+      <li>Taught GCSE and A Level Computer Science to students aged 11–18 and contributed to curriculum design across Key Stages 3, 4 and 5.</li>
+    </ul>
+
+    <h3>Mathematics and Computer Science teacher <span class="org">— One in a Million Free School, Bradford, UK</span></h3>
+    <p class="dates">September 2018 – July 2020</p>
+    <ul>
+      <li>Deputised for the Head of Department, running the Mathematics department in his absence.</li>
+      <li>Led the design and planning of a new computing curriculum, including introductory Python, algorithms and data analytics.</li>
+      <li>Conducted data analysis of examination performance to identify focus areas, then created and implemented targeted intervention programmes.</li>
+      <li>Delivered the Edexcel GCSE Mathematics syllabus across KS3 and KS4; conducted teacher observation, performance management and NQT mentoring.</li>
+    </ul>
+
+    <h3>Computer Science teacher <span class="org">— Lightcliffe Academy, Halifax, UK</span></h3>
+    <p class="dates">March 2018 – July 2018</p>
+    <ul>
+      <li>Delivered the Computer Science National Curriculum across Years 7–13, introducing the new KS3 curriculum, the OCR GCSE course and a BTEC Level 3 course in ICT.</li>
+    </ul>
+
+    <h3>Curriculum leader, Technology <span class="org">— Trinity Academy Sowerby Bridge, UK</span></h3>
+    <p class="dates">September 2017 – March 2018</p>
+    <ul>
+      <li>Managed the Technology department covering Computer Science, iMedia and Business Studies, supervising delivery across specialist and non-specialist teachers.</li>
+      <li>Implemented intervention strategies and monitored attainment through assessment and target setting.</li>
+    </ul>
+
+    <h3>Computer Science teacher <span class="org">— GEMS Wellington International School, Dubai, UAE</span></h3>
+    <p class="dates">September 2015 – July 2017</p>
+    <ul>
+      <li>Taught Cambridge IGCSE Computer Science, IGCSE ICT and the IB curriculum to students aged 11–18, and contributed to curriculum design across Key Stages 3 and 4.</li>
+    </ul>
+    <p class="earl">Earlier: ICT trainee teacher (PGCE placements) — King James Secondary School, Knaresborough and Bury Church of England High School, UK · 2014–2015</p>
+
+    <h2>Education</h2>
+    <h3>PhD Computer Science (part-time)</h3>
+    <p class="dates">University of Portsmouth, UK · 2024 – present</p>
+    <p class="detail">Early detection of Type-2 diabetes risk using AI and machine learning in the South Asian population</p>
+
+    <h3>MSc Computer Science and Data Science</h3>
+    <p class="dates">University of Sunderland, UK · 2023 – 2024</p>
+    <p class="detail">Machine learning, time series analysis, big data technologies, deep learning with TensorFlow and PyTorch; dissertation applying Bayesian methods to predictive modelling on health-relevant datasets</p>
+
+    <h3>PGCE Computing and ICT</h3>
+    <p class="dates">Manchester Metropolitan University, UK · 2014 – 2015</p>
+
+    <h3>Subject Knowledge Enhancement course, Computing</h3>
+    <p class="dates">Manchester Metropolitan University, UK · 2014</p>
+
+    <h3>LLB Law</h3>
+    <p class="dates">Leeds Metropolitan University, UK · 2006 – 2010</p>
+
+    <h2>Professional development and memberships</h2>
+    <ul>
+      <li>Member, British Computer Society (BCS).</li>
+      <li>DataCamp Machine Learning Scientist with Python track completed; Machine Learning Engineer specialisation in progress.</li>
+      <li>Preparing for Microsoft AI-300: Machine Learning Operations (MLOps) Engineer Associate (successor to the retired DP-100).</li>
+    </ul>
+
+    <h2>Additional</h2>
+    <div class="kv">
+      <p><b>Languages:</b> English (native), Urdu (basic spoken)</p>
+      <p><b>Interests:</b> Football, running and cycling; has run several marathons including London and New York, fundraising for charity</p>
+      <p><b>Volunteering:</b> Local tuition centres, supporting students in Years 5–11 with Computer Science and Mathematics</p>
+    </div>
+
+    <p class="note">Last updated October 2026. <a href="https://kesserkarim.com/">kesserkarim.com</a></p>
+  </div>
+</body>
+</html>
