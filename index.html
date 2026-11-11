@@ -3,14 +3,19 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Kesser Karim</title>
+  <title>Kesser Karim | Machine Learning Engineer</title>
   <meta name="description" content="Kesser Karim. Machine learning engineer and PhD researcher in Abu Dhabi, working on fair and well-calibrated clinical risk models. Looking for ML and AI engineering roles in the UAE or remote.">
   <link rel="canonical" href="https://kesserkarim.com/">
-  <meta property="og:title" content="Kesser Karim">
+  <meta property="og:title" content="Kesser Karim | Machine Learning Engineer">
   <meta property="og:description" content="Machine learning engineer and PhD researcher. Fair, well-calibrated clinical risk models. Looking for ML and AI engineering roles in the UAE or remote.">
   <meta property="og:type" content="profile">
   <meta property="og:url" content="https://kesserkarim.com">
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23222'/%3E%3Ctext x='16' y='23' font-family='Georgia,serif' font-size='21' fill='%23fff' text-anchor='middle'%3EK%3C/text%3E%3C/svg%3E">
+  <meta name="theme-color" content="#0b1f3a">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230b1f3a'/%3E%3Ctext x='16' y='22.5' font-family='Arial,sans-serif' font-weight='700' font-size='17' fill='%23fff' text-anchor='middle'%3EKK%3C/text%3E%3C/svg%3E">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;800&display=swap" rel="stylesheet">
 
   <script type="application/ld+json">
   {
@@ -30,115 +35,322 @@
   </script>
 
   <style>
-    :root { color-scheme: light dark; }
-    html { -webkit-text-size-adjust: 100%; }
-    body {
-      font-family: Charter, "Bitstream Charter", "Sitka Text", Cambria, Georgia, serif;
-      font-size: 19px;
-      line-height: 1.62;
-      color: #1c1c1c;
-      background: #fff;
-      max-width: 38em;
-      margin: 0 auto;
-      padding: 3.5em 1.25em 4em;
+    :root {
+      --navy: #0b1f3a;
+      --navy-2: #12305a;
+      --ink: #152033;
+      --muted: #5a6577;
+      --blue: #2458e6;
+      --line: #e1e6ee;
+      --tint: #f4f6fa;
+      --white: #fff;
     }
-    h1 { font-size: 1.9em; line-height: 1.15; margin: 0; }
-    h2 { font-size: 1.2em; margin: 2.6em 0 0.5em; }
-    h3 { font-size: 1em; margin: 1.8em 0 0.4em; }
-    p { margin: 0 0 1em; }
-    .sub { color: #555; margin: 0.25em 0 0.9em; }
-    .links { margin: 0 0 2.2em; }
-    .links a { margin-right: 1.1em; white-space: nowrap; }
-    a { color: #0b4f9e; text-underline-offset: 0.15em; }
-    a:visited { color: #5b3a8c; }
-    a:hover { color: #000; }
-    a:focus-visible { outline: 2px solid #0b4f9e; outline-offset: 2px; }
-    dl { display: grid; grid-template-columns: 5.2em 1fr; gap: 0.3em 1em; margin: 0 0 0.6em; font-size: 0.93em; line-height: 1.5; }
-    dt { color: #555; }
-    dd { margin: 0; }
-    ul { padding-left: 1.1em; margin: 0 0 1em; }
-    li { margin-bottom: 0.45em; }
-    footer { font-size: 0.85em; color: #555; margin-top: 3.5em; padding-top: 1em; border-top: 1px solid #ddd; }
-    @media (prefers-color-scheme: dark) {
-      body { color: #e4e4e4; background: #161616; }
-      .sub, dt, footer { color: #a3a3a3; }
-      a { color: #8ab8f0; }
-      a:visited { color: #c1a6ea; }
-      a:hover { color: #fff; }
-      footer { border-color: #333; }
+    *, *::before, *::after { box-sizing: border-box; }
+    html { scroll-behavior: smooth; scroll-padding-top: 4.5rem; -webkit-text-size-adjust: 100%; }
+    body { margin: 0; font-family: Figtree, system-ui, -apple-system, "Segoe UI", sans-serif; font-size: 17px; line-height: 1.6; color: var(--ink); background: var(--white); }
+    .wrap { width: min(100% - 2.5rem, 68rem); margin-inline: auto; }
+    a { color: var(--blue); }
+    h1, h2, h3 { line-height: 1.2; margin: 0; }
+    p { margin: 0 0 1rem; }
+    :focus-visible { outline: 3px solid #f5a524; outline-offset: 2px; border-radius: 4px; }
+
+    /* Nav */
+    .nav { position: sticky; top: 0; z-index: 10; background: var(--navy); border-bottom: 1px solid rgba(255,255,255,.08); }
+    .nav .wrap { display: flex; align-items: center; justify-content: space-between; height: 3.6rem; }
+    .nav .brand { color: #fff; font-weight: 800; text-decoration: none; letter-spacing: -0.01em; }
+    .nav ul { display: flex; gap: 1.6rem; list-style: none; margin: 0; padding: 0; font-size: 0.95rem; }
+    .nav ul a { color: #c5d0e2; text-decoration: none; }
+    .nav ul a:hover { color: #fff; }
+    .nav ul .cv a { color: #fff; border: 1px solid rgba(255,255,255,.4); padding: 0.3rem 0.8rem; border-radius: 6px; }
+    .nav ul .cv a:hover { background: #fff; color: var(--navy); }
+
+    /* Hero */
+    .hero { background: var(--navy); color: #fff; padding: 4.5rem 0 5rem; }
+    .hero .wrap { display: grid; grid-template-columns: minmax(0, 1.25fr) minmax(0, 0.75fr); gap: 3.5rem; align-items: center; }
+    .hero h1 { font-size: clamp(2.6rem, 6vw, 4rem); font-weight: 800; letter-spacing: -0.03em; }
+    .hero .role { font-size: 1.3rem; color: #9fc0ff; font-weight: 600; margin: 0.5rem 0 1.3rem; }
+    .hero .intro { color: #d3dceb; font-size: 1.1rem; max-width: 34rem; }
+    .badges { display: flex; flex-wrap: wrap; gap: 0.5rem; list-style: none; padding: 0; margin: 1.5rem 0 0; }
+    .badges li { font-size: 0.88rem; font-weight: 500; padding: 0.3rem 0.7rem; border-radius: 6px; background: rgba(255,255,255,.09); border: 1px solid rgba(255,255,255,.16); }
+    .badges li.open { background: rgba(72, 199, 142, .16); border-color: rgba(72, 199, 142, .5); color: #b5f0d3; }
+    .actions { display: flex; flex-wrap: wrap; gap: 0.7rem; margin-top: 1.8rem; }
+    .btn { display: inline-block; font-weight: 600; text-decoration: none; padding: 0.7rem 1.25rem; border-radius: 8px; border: 1.5px solid transparent; font-size: 1rem; }
+    .btn.solid { background: var(--blue); color: #fff; }
+    .btn.solid:hover { background: #3b6cf5; }
+    .btn.ghost { color: #fff; border-color: rgba(255,255,255,.45); }
+    .btn.ghost:hover { background: rgba(255,255,255,.1); border-color: #fff; }
+    .glance { background: var(--navy-2); border: 1px solid rgba(255,255,255,.12); border-radius: 12px; padding: 1.5rem 1.6rem; }
+    .glance h2 { font-size: 0.95rem; font-weight: 600; color: #9fc0ff; margin-bottom: 0.9rem; }
+    .glance dl { margin: 0; }
+    .glance dt { font-size: 0.82rem; color: #9fb0c9; margin-top: 0.9rem; }
+    .glance dt:first-child { margin-top: 0; }
+    .glance dd { margin: 0.1rem 0 0; font-weight: 500; line-height: 1.4; }
+
+    /* Sections */
+    section { padding: 4.5rem 0; }
+    section.alt { background: var(--tint); }
+    section h2 { font-size: 1.9rem; font-weight: 800; letter-spacing: -0.02em; margin-bottom: 0.4rem; }
+    section h2::after { content: ""; display: block; width: 2.6rem; height: 4px; background: var(--blue); border-radius: 2px; margin-top: 0.6rem; }
+    .lead { color: var(--muted); max-width: 40rem; margin: 1rem 0 2.2rem; }
+    .about { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 0 3rem; margin-top: 1.8rem; }
+
+    /* Projects */
+    .cards { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.4rem; }
+    .card { background: #fff; border: 1px solid var(--line); border-radius: 12px; padding: 1.6rem; display: flex; flex-direction: column; }
+    .card.wide { grid-column: 1 / -1; }
+    .card .top { display: flex; align-items: center; justify-content: space-between; gap: 1rem; margin-bottom: 0.7rem; }
+    .card h3 { font-size: 1.3rem; font-weight: 800; letter-spacing: -0.01em; }
+    .state { font-size: 0.8rem; font-weight: 600; padding: 0.2rem 0.6rem; border-radius: 5px; white-space: nowrap; }
+    .state.early { background: #fff3d6; color: #8a5a00; }
+    .state.plan { background: #e9edf3; color: #48556a; }
+    .state.dev { background: #e3ecff; color: #1d44b8; }
+    .card dl { display: grid; grid-template-columns: 4.6rem 1fr; gap: 0.45rem 1rem; margin: 0.4rem 0 1.1rem; font-size: 0.95rem; }
+    .card dt { color: var(--muted); font-weight: 600; }
+    .card dd { margin: 0; }
+    .tags { display: flex; flex-wrap: wrap; gap: 0.4rem; list-style: none; padding: 0; margin: auto 0 0; }
+    .tags li { font-size: 0.82rem; font-weight: 500; padding: 0.15rem 0.55rem; border: 1px solid var(--line); border-radius: 5px; color: #3a4558; background: var(--tint); }
+    .card .more { margin-top: 1.2rem; }
+    .card .btn { padding: 0.5rem 1rem; font-size: 0.95rem; }
+    .btn.line { color: var(--navy); border-color: var(--navy); }
+    .btn.line:hover { background: var(--navy); color: #fff; }
+
+    /* Skills */
+    .skills { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1.8rem 2.2rem; margin-top: 2rem; }
+    .skills h3 { font-size: 1.02rem; font-weight: 600; margin-bottom: 0.6rem; }
+    .skills .tags li { background: #fff; }
+
+    /* Timeline */
+    .cols { display: grid; grid-template-columns: minmax(0, 1.2fr) minmax(0, 0.8fr); gap: 3rem; margin-top: 2rem; }
+    .cols h3 { font-size: 1.1rem; font-weight: 600; color: var(--muted); margin-bottom: 1rem; }
+    .entry { padding-left: 1.2rem; border-left: 2px solid var(--line); margin-bottom: 1.5rem; }
+    .entry strong { display: block; font-weight: 600; line-height: 1.35; }
+    .entry .where { color: var(--muted); font-size: 0.95rem; }
+    .entry p { margin: 0.35rem 0 0; font-size: 0.97rem; }
+
+    .post { display: block; max-width: 40rem; margin-top: 1.8rem; padding: 1.3rem 1.5rem; border: 1px solid var(--line); border-radius: 12px; text-decoration: none; color: var(--ink); background: #fff; }
+    .post:hover { border-color: var(--blue); }
+    .post strong { display: block; font-size: 1.15rem; line-height: 1.35; }
+    .post span { color: var(--muted); font-size: 0.92rem; }
+
+    /* Contact */
+    .contact { background: var(--navy); color: #fff; }
+    .contact h2::after { background: #9fc0ff; }
+    .contact p { color: #d3dceb; max-width: 36rem; margin-top: 1.2rem; }
+
+    footer { background: var(--navy); color: #9fb0c9; font-size: 0.88rem; padding: 1.4rem 0 2rem; border-top: 1px solid rgba(255,255,255,.1); }
+    footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 0.4rem 2rem; }
+    footer a { color: #c5d0e2; }
+
+    @media (max-width: 54rem) {
+      .hero { padding: 3rem 0 3.5rem; }
+      .hero .wrap, .about, .cards, .cols { grid-template-columns: 1fr; }
+      .hero .wrap { gap: 2.2rem; }
+      .skills { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .nav ul li:not(.cv) { display: none; }
+      section { padding: 3.2rem 0; }
     }
-    @media (max-width: 480px) {
-      body { font-size: 17.5px; padding-top: 2.2em; }
-      dl { grid-template-columns: 1fr; gap: 0; }
-      dd { margin-bottom: 0.5em; }
+    @media (max-width: 34rem) {
+      .skills { grid-template-columns: 1fr; }
+      .card dl { grid-template-columns: 1fr; gap: 0; }
+      .card dd { margin-bottom: 0.5rem; }
     }
   </style>
 </head>
 <body>
 
-  <h1>Kesser Karim</h1>
-  <p class="sub">Machine learning engineer and PhD researcher, Abu Dhabi</p>
-  <p class="links">
-    <a href="mailto:kesserk@gmail.com">Email</a>
-    <a href="/cv.html">CV</a>
-    <a href="https://github.com/kesserk">GitHub</a>
-    <a href="https://www.linkedin.com/in/kesser-karim/">LinkedIn</a>
-    <a href="https://kesserkarim.substack.com">Substack</a>
-  </p>
+  <header class="nav">
+    <div class="wrap">
+      <a class="brand" href="#top">Kesser Karim</a>
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li class="cv"><a href="/cv.html">CV</a></li>
+      </ul>
+    </div>
+  </header>
 
-  <p>I've taught Computer Science for over ten years and I'm now moving into machine learning engineering. <strong>I'm looking for ML Engineer, AI Engineer or Applied Scientist roles in the UAE (on site or hybrid) or remote.</strong></p>
+  <main id="top">
+    <div class="hero">
+      <div class="wrap">
+        <div>
+          <h1>Kesser Karim</h1>
+          <p class="role">Machine learning engineer and PhD researcher</p>
+          <p class="intro">I build clinical risk models and check that they work for every group of patients, not only on average. I've taught Computer Science for over ten years and I'm now moving into machine learning engineering.</p>
+          <ul class="badges">
+            <li class="open">Open to ML and AI engineering roles</li>
+            <li>Abu Dhabi, UAE</li>
+            <li>On site, hybrid or remote</li>
+          </ul>
+          <div class="actions">
+            <a class="btn solid" href="#projects">See my projects</a>
+            <a class="btn ghost" href="/cv.html">CV</a>
+            <a class="btn ghost" href="https://github.com/kesserk">GitHub</a>
+            <a class="btn ghost" href="https://www.linkedin.com/in/kesser-karim/">LinkedIn</a>
+          </div>
+        </div>
+        <aside class="glance" aria-labelledby="glance-title">
+          <h2 id="glance-title">At a glance</h2>
+          <dl>
+            <dt>Looking for</dt><dd>ML Engineer, AI Engineer or Applied Scientist roles</dd>
+            <dt>Research</dt><dd>Part-time PhD, University of Portsmouth: early Type 2 Diabetes risk prediction</dd>
+            <dt>Focus</dt><dd>Fairness, calibration and explainability</dd>
+            <dt>Day job</dt><dd>Computer Science teacher and whole-school AI lead</dd>
+          </dl>
+        </aside>
+      </div>
+    </div>
 
-  <p>I'm doing a part-time PhD at the University of Portsmouth on predicting Type 2 Diabetes risk early in South Asian populations. The data comes from Connected Bradford and UK Biobank.</p>
+    <section id="about">
+      <div class="wrap">
+        <h2>About</h2>
+        <div class="about">
+          <div>
+            <p>I'm doing a part-time PhD at the University of Portsmouth on predicting Type 2 Diabetes risk early in South Asian populations. The data comes from Connected Bradford and UK Biobank.</p>
+            <p>A risk model can look fine on average and still be wrong for one group of patients. Most diabetes risk scores were built on mainly white European data, and South Asians get Type 2 Diabetes at two to four times the rate.</p>
+          </div>
+          <div>
+            <p>That matters here in the Gulf as well, where diabetes rates are among the highest in the world. A lot of my time goes on calibration and on checking results group by group.</p>
+            <p>I teach full time in Abu Dhabi and do the PhD and these projects alongside it.</p>
+          </div>
+        </div>
+      </div>
+    </section>
 
-  <p>A risk model can look fine on average and still be wrong for one group of patients. Most diabetes risk scores were built on mainly white European data, and South Asians get Type 2 Diabetes at two to four times the rate. That matters here in the Gulf as well, where diabetes rates are among the highest in the world. A lot of my time goes on calibration and on checking results group by group.</p>
+    <section id="projects" class="alt">
+      <div class="wrap">
+        <h2>Projects</h2>
+        <p class="lead">These are being built in public, and each one says how far along it is.</p>
+        <div class="cards">
+          <article class="card wide">
+            <div class="top"><h3>T2D Risk Predictor</h3><span class="state early">Early stage</span></div>
+            <p>A Type 2 Diabetes risk model that I check by ethnicity, sex and age band as well as overall.</p>
+            <dl>
+              <dt>Data</dt><dd>NHANES, which is public. I can't share the NHS data from my PhD, so this uses the same method on open data.</dd>
+              <dt>Method</dt><dd>Four models: logistic regression, XGBoost, an MLP and a tabular transformer. I compare them on AUROC, AUPRC, Brier score and calibration error.</dd>
+              <dt>Status</dt><dd>The API skeleton, Docker, CI, the EDA notebook and a baseline model are done. The fairness audit and the SHAP work aren't, so I have no results to show yet. NHANES also doesn't have many South Asian participants, which will limit what the results can say.</dd>
+            </dl>
+            <ul class="tags" aria-label="Tools">
+              <li>Python</li><li>XGBoost</li><li>PyTorch</li><li>scikit-learn</li><li>Fairlearn</li><li>SHAP</li><li>FastAPI</li><li>Docker</li><li>MLflow</li><li>GitHub Actions</li>
+            </ul>
+            <div class="more"><a class="btn line" href="https://github.com/kesserk/t2d-risk-predictor">Code on GitHub</a></div>
+          </article>
 
-  <p>I teach full time in Abu Dhabi and do the PhD and these projects alongside it.</p>
+          <article class="card">
+            <div class="top"><h3>Diabetes Guidance RAG</h3><span class="state plan">Not built yet</span></div>
+            <p>Question answering over the NICE NG28 and ADA diabetes guidelines. I mainly want to measure how often it gets things wrong or makes things up.</p>
+            <dl>
+              <dt>Method</dt><dd>BM25 and PubMedBERT embeddings in pgvector, with a reranker. Answers point back to the guideline section they used.</dd>
+              <dt>Status</dt><dd>The repo has the design and the to-do list.</dd>
+            </dl>
+            <ul class="tags" aria-label="Tools">
+              <li>LangChain</li><li>pgvector</li><li>PubMedBERT</li><li>RAGAS</li><li>Langfuse</li>
+            </ul>
+            <div class="more"><a class="btn line" href="https://github.com/kesserk/diabetes-rag">Design on GitHub</a></div>
+          </article>
 
-  <h2>Projects</h2>
+          <article class="card">
+            <div class="top"><h3>MarkMate</h3><span class="state dev">In development</span></div>
+            <p>A marking tool for teachers. It drafts feedback against the mark scheme, so marking takes less time and the feedback is more consistent.</p>
+            <p>If you teach and want to try it, email me.</p>
+            <ul class="tags" aria-label="Tools">
+              <li>LLM application</li><li>Education</li>
+            </ul>
+            <div class="more"><a class="btn line" href="mailto:kesserk@gmail.com?subject=MarkMate">Ask to try it</a></div>
+          </article>
+        </div>
+      </div>
+    </section>
 
-  <h3><a href="https://github.com/kesserk/t2d-risk-predictor">T2D Risk Predictor</a></h3>
-  <p>A Type 2 Diabetes risk model that I check by ethnicity, sex and age band as well as overall.</p>
-  <dl>
-    <dt>Data</dt><dd>NHANES, which is public. I can't share the NHS data from my PhD, so this uses the same method on open data.</dd>
-    <dt>Method</dt><dd>Four models: logistic regression, XGBoost, an MLP and a tabular transformer. I compare them on AUROC, AUPRC, Brier score and calibration error. Fairlearn for the group checks, SHAP for explanations, FastAPI and Docker for serving.</dd>
-    <dt>Status</dt><dd>Early. The API skeleton, Docker, CI, the EDA notebook and a baseline model are done. The fairness audit and the SHAP work aren't, so I have no results to show yet. NHANES also doesn't have many South Asian participants, which will limit what the results can say.</dd>
-  </dl>
+    <section id="skills">
+      <div class="wrap">
+        <h2>Skills</h2>
+        <div class="skills">
+          <div><h3>Machine learning</h3><ul class="tags"><li>PyTorch</li><li>TensorFlow</li><li>scikit-learn</li><li>XGBoost</li><li>LightGBM</li><li>Hugging Face Transformers</li></ul></div>
+          <div><h3>LLMs and RAG</h3><ul class="tags"><li>LangChain</li><li>LlamaIndex</li><li>pgvector</li><li>Pinecone</li><li>QLoRA fine-tuning</li><li>Evaluation harnesses</li></ul></div>
+          <div><h3>ML engineering</h3><ul class="tags"><li>FastAPI</li><li>Docker</li><li>MLflow</li><li>Git</li><li>GitHub Actions</li><li>Model serving</li></ul></div>
+          <div><h3>Fairness and explainability</h3><ul class="tags"><li>Fairlearn</li><li>AIF360</li><li>SHAP</li><li>Model calibration</li><li>Clinical risk prediction</li></ul></div>
+          <div><h3>Data</h3><ul class="tags"><li>Python</li><li>SQL</li><li>R</li><li>pandas</li><li>NumPy</li><li>Spark</li><li>Power BI</li><li>Tableau</li></ul></div>
+          <div><h3>Cloud</h3><ul class="tags"><li>AWS S3</li><li>EC2</li><li>Lambda</li><li>Microsoft Azure</li></ul></div>
+        </div>
+      </div>
+    </section>
 
-  <h3><a href="https://github.com/kesserk/diabetes-rag">Diabetes Guidance RAG</a></h3>
-  <p>Question answering over the NICE NG28 and ADA diabetes guidelines. I mainly want to measure how often it gets things wrong or makes things up.</p>
-  <dl>
-    <dt>Method</dt><dd>BM25 and PubMedBERT embeddings in pgvector, with a reranker. Answers point back to the guideline section they used. I'll test it with RAGAS and a set of clinical questions I write by hand.</dd>
-    <dt>Status</dt><dd>Not built yet. The repo has the design and the to-do list.</dd>
-  </dl>
+    <section id="experience" class="alt">
+      <div class="wrap">
+        <h2>Experience and education</h2>
+        <div class="cols">
+          <div>
+            <h3>Experience</h3>
+            <div class="entry">
+              <strong>Computer Science teacher and whole-school AI lead</strong>
+              <span class="where">Nord Anglia International School Abu Dhabi, 2024 to present</span>
+              <p>Helped set up the Secondary Computer Science department. I teach Cambridge IGCSE and A Level.</p>
+            </div>
+            <div class="entry">
+              <strong>Computer Science teacher and Gifted &amp; Talented coordinator</strong>
+              <span class="where">Safa Community School, Dubai, 2021 to 2024</span>
+              <p>Built the Power BI dashboards the school used to track about 200 students across six subjects, and automated the data pipelines behind them. Taught a Python and data science course in Jupyter.</p>
+            </div>
+            <div class="entry">
+              <strong>Computer Science and Maths teacher</strong>
+              <span class="where">Schools in Bradford, Halifax and Dubai, 2015 to 2020</span>
+              <p>Included a spell as Curriculum Leader for Technology at Trinity Academy Sowerby Bridge.</p>
+            </div>
+          </div>
+          <div>
+            <h3>Education</h3>
+            <div class="entry">
+              <strong>PhD Computer Science (part-time)</strong>
+              <span class="where">University of Portsmouth, 2024 to present</span>
+            </div>
+            <div class="entry">
+              <strong>MSc Computer Science and Data Science</strong>
+              <span class="where">University of Sunderland, 2024</span>
+            </div>
+            <div class="entry">
+              <strong>PGCE Computing</strong>
+              <span class="where">Manchester Metropolitan University, 2015</span>
+            </div>
+            <div class="entry">
+              <strong>LLB Law</strong>
+              <span class="where">Leeds Metropolitan University, 2010</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-  <h3>MarkMate</h3>
-  <p>A marking tool for teachers. It drafts feedback against the mark scheme, so marking takes less time and the feedback is more consistent. It's still in development. If you teach and want to try it, email me.</p>
+    <section id="writing">
+      <div class="wrap">
+        <h2>Writing</h2>
+        <a class="post" href="https://kesserkarim.substack.com/p/why-early-type-2-diabetes-prediction-needs-fairness">
+          <strong>Why early Type 2 Diabetes prediction needs fairness, not just accuracy</strong>
+          <span>On Substack</span>
+        </a>
+      </div>
+    </section>
 
-  <h2>Tools</h2>
-  <p>Mostly Python, PyTorch, scikit-learn, XGBoost, Fairlearn, SHAP, FastAPI, Docker, MLflow, LangChain, pgvector and SQL. The full list is on my <a href="/cv.html">CV</a>.</p>
-
-  <h2>Background</h2>
-  <ul>
-    <li>PhD Computer Science (part-time), University of Portsmouth, 2024 to present</li>
-    <li>MSc Computer Science and Data Science, University of Sunderland, 2024</li>
-    <li>Computer Science teacher and whole-school AI lead, Nord Anglia International School Abu Dhabi, 2024 to present</li>
-    <li>Computer Science teacher and Gifted &amp; Talented coordinator, Safa Community School, Dubai, 2021 to 2024. I built the Power BI dashboards the school used to track about 200 students across six subjects.</li>
-    <li>Computer Science and Maths teacher in Bradford, Halifax and Dubai, 2015 to 2020</li>
-    <li>PGCE Computing, Manchester Metropolitan University, 2015</li>
-    <li>LLB Law, Leeds Metropolitan University, 2010</li>
-  </ul>
-
-  <h2>Writing</h2>
-  <p><a href="https://kesserkarim.substack.com/p/why-early-type-2-diabetes-prediction-needs-fairness">Why early Type 2 Diabetes prediction needs fairness, not just accuracy</a></p>
-
-  <h2>Outside work</h2>
-  <p>Football, cycling and running. I've run a few marathons, including London and New York.</p>
-
-  <h2>Contact</h2>
-  <p>The best way to reach me is email: <a href="mailto:kesserk@gmail.com">kesserk@gmail.com</a>. My <a href="/cv.html">CV</a> is a web page, so you can print it or save it as a PDF.</p>
+    <section id="contact" class="contact">
+      <div class="wrap">
+        <h2>Contact</h2>
+        <p>The best way to reach me is email. If you're hiring for an ML or AI engineering role in the UAE or remote, I'd like to hear from you.</p>
+        <div class="actions">
+          <a class="btn solid" href="mailto:kesserk@gmail.com">kesserk@gmail.com</a>
+          <a class="btn ghost" href="https://www.linkedin.com/in/kesser-karim/">LinkedIn</a>
+          <a class="btn ghost" href="/cv.html">CV</a>
+        </div>
+      </div>
+    </section>
+  </main>
 
   <footer>
-    Last updated November 2026. <a href="https://github.com/kesserk/kesserk.github.io">Source on GitHub</a>.
+    <div class="wrap">
+      <span>Kesser Karim. Outside work: football, cycling and running marathons.</span>
+      <span>Last updated November 2026. <a href="https://github.com/kesserk/kesserk.github.io">Source on GitHub</a></span>
+    </div>
   </footer>
 
 </body>
