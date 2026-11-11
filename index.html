@@ -86,41 +86,36 @@
     <a href="https://kesserkarim.substack.com">Substack</a>
   </p>
 
-  <p>I'm moving into machine learning engineering after more than ten years of teaching Computer Science. <strong>I'm looking for a Machine Learning Engineer, AI Engineer or Applied Scientist role, on site or hybrid in the UAE, or remote.</strong></p>
+  <p>I've taught Computer Science for over ten years and I'm now moving into machine learning engineering. <strong>I'm looking for ML Engineer, AI Engineer or Applied Scientist roles in the UAE (on site or hybrid) or remote.</strong></p>
 
-  <p>My work is on clinical risk models, and mostly on one question: does the model work as well for every group of patients as it does on average? My PhD at the University of Portsmouth (part-time, since 2024) is on early detection of Type 2 Diabetes risk in South Asian populations, using linked health data from Connected Bradford and UK Biobank.</p>
+  <p>I'm doing a part-time PhD at the University of Portsmouth on predicting Type 2 Diabetes risk early in South Asian populations. The data comes from Connected Bradford and UK Biobank.</p>
 
-  <p>Most diabetes risk scores were built on largely white European data. They tend to do worst where diabetes is most common, which includes the Gulf and South Asia. So I spend more of my time on calibration and subgroup audits than on squeezing out another point of accuracy.</p>
+  <p>A risk model can look fine on average and still be wrong for one group of patients. Most diabetes risk scores were built on mainly white European data, and South Asians get Type 2 Diabetes at two to four times the rate. That matters here in the Gulf as well, where diabetes rates are among the highest in the world. A lot of my time goes on calibration and on checking results group by group.</p>
 
-  <p>I still teach, in Abu Dhabi. It has made me fairly good at explaining technical work to people who'd rather not hear about it.</p>
+  <p>I teach full time in Abu Dhabi and do the PhD and these projects alongside it.</p>
 
-  <h2>What I'm building</h2>
+  <h2>Projects</h2>
 
   <h3><a href="https://github.com/kesserk/t2d-risk-predictor">T2D Risk Predictor</a></h3>
+  <p>A Type 2 Diabetes risk model that I check by ethnicity, sex and age band as well as overall.</p>
   <dl>
-    <dt>Question</dt><dd>Is a diabetes risk model equally well calibrated across ethnicity, sex and age bands? Where it isn't, how much of the gap can be fixed?</dd>
-    <dt>Data</dt><dd>NHANES, which is open. The NHS data from my PhD can't be shared, so this repeats the method in public.</dd>
-    <dt>Method</dt><dd>Logistic regression, XGBoost, an MLP and a tabular transformer, compared on AUROC, AUPRC, Brier score and calibration error. Fairlearn for the subgroup audit, SHAP for explanations, served with FastAPI in Docker.</dd>
-    <dt>Status</dt><dd>In progress. The API skeleton, Docker image, CI, exploratory analysis and a baseline model are done. The audit and explanations are not, and I won't post numbers until they are. NHANES has few South Asian participants, so the results will need careful reading.</dd>
+    <dt>Data</dt><dd>NHANES, which is public. I can't share the NHS data from my PhD, so this uses the same method on open data.</dd>
+    <dt>Method</dt><dd>Four models: logistic regression, XGBoost, an MLP and a tabular transformer. I compare them on AUROC, AUPRC, Brier score and calibration error. Fairlearn for the group checks, SHAP for explanations, FastAPI and Docker for serving.</dd>
+    <dt>Status</dt><dd>Early. The API skeleton, Docker, CI, the EDA notebook and a baseline model are done. The fairness audit and the SHAP work aren't, so I have no results to show yet. NHANES also doesn't have many South Asian participants, which will limit what the results can say.</dd>
   </dl>
 
   <h3><a href="https://github.com/kesserk/diabetes-rag">Diabetes Guidance RAG</a></h3>
+  <p>Question answering over the NICE NG28 and ADA diabetes guidelines. I mainly want to measure how often it gets things wrong or makes things up.</p>
   <dl>
-    <dt>Question</dt><dd>How often does a question answering system over clinical guidelines make things up, and can you measure it properly?</dd>
-    <dt>Data</dt><dd>NICE NG28 and the ADA Standards of Care.</dd>
-    <dt>Method</dt><dd>BM25 plus PubMedBERT embeddings in pgvector, with reranking. Answers cite the guideline section they came from. Evaluation is RAGAS alongside a hand-written set of clinical questions.</dd>
-    <dt>Status</dt><dd>Design only. The repository holds the plan and a checklist with nothing ticked yet.</dd>
+    <dt>Method</dt><dd>BM25 and PubMedBERT embeddings in pgvector, with a reranker. Answers point back to the guideline section they used. I'll test it with RAGAS and a set of clinical questions I write by hand.</dd>
+    <dt>Status</dt><dd>Not built yet. The repo has the design and the to-do list.</dd>
   </dl>
 
   <h3>MarkMate</h3>
-  <dl>
-    <dt>Question</dt><dd>Can AI-drafted feedback cut marking time without the feedback getting less consistent?</dd>
-    <dt>Method</dt><dd>It drafts structured feedback against the mark scheme, to cut marking time and keep feedback consistent.</dd>
-    <dt>Status</dt><dd>In development. I'm looking for teachers to try it.</dd>
-  </dl>
+  <p>A marking tool for teachers. It drafts feedback against the mark scheme, so marking takes less time and the feedback is more consistent. It's still in development. If you teach and want to try it, email me.</p>
 
   <h2>Tools</h2>
-  <p>Python, PyTorch, scikit-learn, XGBoost, Fairlearn, SHAP, FastAPI, Docker, MLflow, LangChain, pgvector and SQL are the ones I reach for most. The longer list is on my <a href="/cv.html">CV</a>.</p>
+  <p>Mostly Python, PyTorch, scikit-learn, XGBoost, Fairlearn, SHAP, FastAPI, Docker, MLflow, LangChain, pgvector and SQL. The full list is on my <a href="/cv.html">CV</a>.</p>
 
   <h2>Background</h2>
   <ul>
@@ -128,21 +123,22 @@
     <li>MSc Computer Science and Data Science, University of Sunderland, 2024</li>
     <li>Computer Science teacher and whole-school AI lead, Nord Anglia International School Abu Dhabi, 2024 to present</li>
     <li>Computer Science teacher and Gifted &amp; Talented coordinator, Safa Community School, Dubai, 2021 to 2024. I built the Power BI dashboards the school used to track about 200 students across six subjects.</li>
-    <li>Computer Science and Maths teaching in Bradford, Halifax and Dubai, 2015 to 2020</li>
-    <li>PGCE Computing, Manchester Metropolitan University, 2015. Before that, a law degree.</li>
+    <li>Computer Science and Maths teacher in Bradford, Halifax and Dubai, 2015 to 2020</li>
+    <li>PGCE Computing, Manchester Metropolitan University, 2015</li>
+    <li>LLB Law, Leeds Metropolitan University, 2010</li>
   </ul>
 
   <h2>Writing</h2>
   <p><a href="https://kesserkarim.substack.com/p/why-early-type-2-diabetes-prediction-needs-fairness">Why early Type 2 Diabetes prediction needs fairness, not just accuracy</a></p>
 
-  <h2>Otherwise</h2>
-  <p>Football, cycling and running. I've run several marathons, London and New York among them.</p>
+  <h2>Outside work</h2>
+  <p>Football, cycling and running. I've run a few marathons, including London and New York.</p>
 
   <h2>Contact</h2>
-  <p>Email is quickest: <a href="mailto:kesserk@gmail.com">kesserk@gmail.com</a>. My <a href="/cv.html">CV</a> is a web page you can print or save as a PDF.</p>
+  <p>The best way to reach me is email: <a href="mailto:kesserk@gmail.com">kesserk@gmail.com</a>. My <a href="/cv.html">CV</a> is a web page, so you can print it or save it as a PDF.</p>
 
   <footer>
-    Last updated November 2026. This page is one HTML file, and the <a href="https://github.com/kesserk/kesserk.github.io">source is on GitHub</a>.
+    Last updated November 2026. <a href="https://github.com/kesserk/kesserk.github.io">Source on GitHub</a>.
   </footer>
 
 </body>
